@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" type="image/png" href="./favicon.png">
+
+	<title>Arma 3 Server Config Generator</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+	    crossorigin="anonymous">
+	<style>
+		@media screen and (min-width: 1610px) {
+			.lateralNav {
+				position: fixed;
+				/*background-color: rgb(250, 250, 250);*/
+				width: 230px;
+				max-width: 230px;
+				height: auto;
+				top: 50%;
+				right: 2%;
+				/*border-radius: 5px 5px 5px 5px;
+				border: 1px solid rgb(220, 220, 220);*/
+			}
+		}
+
+		@media screen and (max-width: 1610px) {
+			.lateralNav {
+				display: none;
+			}
+		}
+
+		.badge-danger {
+			background-color: rgb(255, 87, 87);
+		}
+
+		.disclaimer {
+			color: rgb(192, 192, 192);
+			font-size: 11px;
+		}
+	</style>
+</head>
+
+<body cz-shortcut-listen="true" data-spy="scroll">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="https://byjokese.com">By-Jokese</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Presets</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://ko-fi.com/byjokese">Donate</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">Arma 3 Server Config Generator</h1>
+			<h2>
+				<span class="badge badge-danger">BETA</span>
+			</h2>
+			<p>Generate your own server configs easily.</p>
+			<p>
+				<a class="btn btn-primary btn-lg" href="https://github.com/byjokese/Arma-Server-Config-Generator" role="button">Learn more »</a>
+			</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="col-sm">
+				<div style="text-align: center;">
+					<div class="btn-group" data-toggle="buttons">
+						<label class="btn btn-secondary active">
+							<input type="radio" class="modeSelector" name="options" id="basicMode" autocomplete="off" checked> Basic
+						</label>
+						<label class="btn btn-secondary">
+							<input type="radio" class="modeSelector" name="options" id="advancedMode" autocomplete="off"> Advanced
+						</label>
+					</div>
+				</div>
+				<form id="serverConfigForm" action="javascript:generateConfigFile();">
+					<fieldset>
+						<a id="GlobalSettings" name="GlobalSettings"></a>
+						<h2>Global Settings</h2>
+						<div class="form-group">
+							<label for="hostname">Host Name</label>
+							<input type="text" class="form-control" name="hostname" id="hostname" aria-describedby="hostnameHelp" placeholder="Server public Name" required>
+							<small id="hostnameHelp" class="form-text text-muted">The name of the server that shall be displayed in the public server list</small>
+						</div>
+						<div class="form-group">
+							<label for="password">Server Password</label>
+							<input type="password" class="form-control" name="password" id="password" aria-describedby="passwordHelp" placeholder="Password" required>
+							<small id="passwordHelp" class="form-text text-muted">Password for joining, eg connecting to the server</small>
+						</div>
+						<div class="form-group">
+							<label for="passwordAdmin">Admin Password</label>
+							<input type="password" class="form-control" name="passwordAdmin" id="passwordAdmin" aria-describedby="passwordAdminHelp" placeholder="Admin Password" required>
+							<small id="passwordAdminHelp" class="form-text text-muted">Password to become server admin. When you're in Arma MP and connected to the server, type '#login mypassword'</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="serverCommandPassword">Command Password</label>
+							<input type="password" class="form-control" name="serverCommandPassword" id="serverCommandPassword" aria-describedby="serverCommandPasswordHelp" placeholder="Password">
+							<small id="serverCommandPasswordHelp" class="form-text text-muted">Password required by alternate syntax of serverCommand on server-side scripting. If blank will be the same as the Admin Password.</small>
+						</div>
+						<div class="form-group">
+							<label for="motd">Messague of the Day (Motd)</label>
+							<textarea class="form-control" rows="2" name="motd" id="motd" aria-describedby="motdHelp" placeholder='Messague 1,Messague 2,Messague 3' pattern="([^,]+,)*[^,]+"></textarea>
+							<small id="motdHelp" class="form-text text-muted">Welcome messagues separated by commas.</small>
+						</div>
+						<div class="form-group">
+							<label for="motdInterval">Motd Interval</label>
+							<input type="number" class="form-control" name="motdInterval" id="motdInterval" aria-describedby="motdIntervalHelp" value="5" min="0" placeholder='5'>
+							<small id="motdIntervalHelp" class="form-text text-muted">Time interval (in seconds) between each message.</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="admins">Admin Whitelist</label>
+							<input type="text" class="form-control" name="admins" id="admins" aria-describedby="adminsHelp" placeholder='UID1,UID2' pattern="([^,]+,)*[^,]+">
+							<small id="adminsHelp" class="form-text text-muted">List of admin Steam UIDs that are whitelisted. Those can use #login w/o password.</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="headlessClients">Headless Client Whitelist</label>
+							<input type="text" class="form-control" name="headlessClients" id="headlessClients" aria-describedby="headlessClientsHelp" placeholder='127.0.0.1, 8.8.8.8' pattern="([^,]+,)*[^,]+">
+							<small id="headlessClientsHelp" class="form-text text-muted">List of IPs that are whitelisted for joining as HeadlessClient.</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="localClient">Local Client Whitelist (low latency)</label>
+							<input type="text" class="form-control" name="localClient" id="localClient" aria-describedby="localClientHelp" placeholder='127.0.0.1, 8.8.8.8' pattern="([^,]+,)*[^,]+">
+							<small id="localClientHelp" class="form-text text-muted">Same as Headless Client Whitelist, but to indicate clients with unlimited bandwidth and nearly no latency.</small>
+						</div>
+					</fieldset>
+					<fieldset>
+						<a id="ConnectionSettings" name="ConnectionSettings"></a>
+						<h2>Connection Settings</h2>
+						<div class="form-group">
+							<label for="maxPlayers">Max Players</label>
+							<input type="number" class="form-control" name="maxPlayers" id="maxPlayers" aria-describedby="maxPlayersHelp" value="8" min="0" placeholder="8">
+							<small id="maxPlayersHelp" class="form-text text-muted">The name of the server that shall be displayed in the public server list</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="kickDuplicate">Kick Duplicates</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="kickDuplicate" id="kickDuplicate" checked> Do not allow duplicate game IDs.
+								</label>
+								<small id="kickduplicateHelp" class="form-text text-muted">Second player with an existing ID will be kicked automatically. 1 means active, 0 disabled.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="verifySignatures">Verify Signatures</label>
+							<select class="form-control" name="verifySignatures" id="verifySignatures" aria-describedby="verifySignaturesHelp">
+								<option value="0">No Protection</option>
+								<option value="1">Weak protection</option>
+								<option value="2">Full protection</option>
+							</select>
+							<small id="verifySignaturesHelp" class="form-text text-muted">Enables or disables the signature verification for addons.</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="disconnectTimeout">Disconnect Timeout</label>
+							<input type="number" class="form-control" name="disconnectTimeout" id="disconnectTimeout" aria-describedby="disconnectTimeoutHelp" value="90" min="5" max="90" placeholder="90 seconds">
+							<small id="disconnectTimeoutHelp" class="form-text text-muted">Server wait time before disconnecting client, default 90 seconds, range 5 to 90 seconds.</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="maxdesync">Max Desync</label>
+							<input type="number" class="form-control" name="maxdesync" id="maxdesync" aria-describedby="maxdesyncHelp" value="150" min="0" placeholder="150 ms">
+							<small id="maxdesyncHelp" class="form-text text-muted">Max desync value until server kicks the user. Units in miliseconds.</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="maxping">Max Ping</label>
+							<input type="number" class="form-control" name="maxping" id="maxping" aria-describedby="maxpingHelp" value="200" min="0" placeholder="200">
+							<small id="maxpingHelp" class="form-text text-muted">Max ping value until server kicks the user. Units in miliseconds.</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="maxpacketloss">Max Packetloss</label>
+							<input type="number" class="form-control" name="maxpacketloss" id="maxpacketloss" aria-describedby="maxpacketlossHelp" value="50" min="0" placeholder="50 packets">
+							<small id="maxpacketlossHelp" class="form-text text-muted">Maximun number of packets lost until the server kicks the user.</small>
+						</div>
+						<div class="form-group">
+							<label for="allowedFilePatching">Allow File Patching</label>
+							<select class="form-control" name="allowedFilePatching" name="allowedFilePatching" id="allowedFilePatching" aria-describedby="allowedFilePatchingHelp">
+								<option value="0">No Clients</option>
+								<option value="1">Only Headless Clients</option>
+								<option value="2">All Clients</option>
+							</select>
+							<small id="allowedFilePatchingHelp" class="form-text text-muted">Prevent or allow file patching for the clients. File patching is the ability for the engine to load local scripts and other files to override versions in packed addons.
+								Without file patching, the game only loads data from PBO and EBO files. The technique is used by developers and modders to quickly iterate on their work, but also
+								by exploits in multiplayer. Default is disabled (No Clients)</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="upnp">UPNP</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="upnp" id="upnp"> Activate uPnP
+								</label>
+								<small id="upnpHelp" class="form-text text-muted">Automatically creates port mapping on UPNP/IGD enabled router. This option allows you to create a server behind NAT (your router must have public IP and support UPNP/IGD
+									protocol).
+								</small>
+							</div>
+						</div>
+						<div class="form-group advanced">
+							<label for="loopback">LAN Mode</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="loopback" id="loopback"> Activate LAN mode (loopback)
+								</label>
+								<small id="loopbackHelp" class="form-text text-muted">Adding this option will force server into LAN mode. This will allow multiple local instances of the game to connect to the server for testing purposes. At the same
+									time it will prevent all non-local instances from connecting.
+								</small>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<a id="In-GameSettings" name="In-GameSettings"></a>
+						<h2>In-Game Settings</h2>
+						<div class="form-group">
+							<label for="BattlEye">BattlEye</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="BattlEye" id="BattlEye" value="1" checked> Enable BattlEye on Server.
+								</label>
+								<small id="BattlEyeHelp" class="form-text text-muted">Enables or disables the BattlEye anti-cheat engine.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="drawingInMap">Drawing in Map</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="drawingInMap" id="drawingInMap" value="1" checked> Allow drawing in map.
+								</label>
+								<small id="drawingInMapHelp" class="form-text text-muted">Enables or disables the ability to place markers and draw lines in map.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="persistent">Persistent</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="persistent" id="persistent" value="0"> Active Persistance on server.
+								</label>
+								<small id="persistentHelp" class="form-text text-muted">Mission keeps running when all clients are disconnect.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="forceRotorLibSimulation">Advanced Flight Model</label>
+							<select class="form-control" name="forceRotorLibSimulation" id="forceRotorLibSimulation" aria-describedby="vonCodecHelp">
+								<option value="0">Up to the player</option>
+								<option value="1">Forced Advanced Flight Model</option>
+								<option value="2">Forced Simple Flight Model</option>
+							</select>
+							<small id="forceRotorLibSimulationHelp" class="form-text text-muted">Enforces the Advanced Flight Model on the server.</small>
+						</div>
+						<div class="form-group">
+							<label for="voteThreshold">Vote Threshold</label>
+							<input type="number" class="form-control" name="voteThreshold" id="voteThreshold" aria-describedby="voteThresholdHelp" value="33" min="0" max="100" placeholder="33%">
+							<small id="voteThresholdHelp" class="form-text text-muted">Percentage of votes needed to confirm a vote. Velue between 0-100. Units in %.</small>
+						</div>
+						<div class="form-group">
+							<label for="voteMissionPlayers">Vote Mission Players</label>
+							<input type="number" class="form-control" name="voteMissionPlayers" id="voteMissionPlayers" aria-describedby="voteMissionPlayersHelp" value="1" min="0" placeholder="0">
+							<small id="voteMissionPlayersHelp" class="form-text text-muted">Start mission-voting when X number of players are connected.</small>
+						</div>
+						<div class="form-group">
+							<label for="disableVoN">Disable VoN</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="disableVoN" id="disableVoN" value="0"> Disable In-Game Voice Communication.
+								</label>
+								<small id="disableVoNpHelp" class="form-text text-muted">Enables or disables the Voice over Net.</small>
+							</div>
+						</div>
+						<div class="form-group advanced">
+							<label for="vonCodec">VoN Audio Codec</label>
+							<select class="form-control" name="vonCodec" id="vonCodec" aria-describedby="vonCodecHelp">
+								<option value="0">SPEEX codec</option>
+								<option value="1">OPUS codec</option>
+							</select>
+							<small id="vonCodecHelp" class="form-text text-muted">Defines VoN codec type.</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="vonCodecQuality">VoN Codec Quality</label>
+							<input type="number" class="form-control" name="vonCodecQuality" id="vonCodecQuality" aria-describedby="vonCodecQualityHelp" value="3" min="1" max="20" placeholder="3">
+							<small id="vonCodecQualityHelp" class="form-text text-muted">Defines VoN codec quality. Quality: 8kHz is 0-10, 16kHz is 11-20, for 21-30 it's 32kHz for SPEEX codec and 48kHz for OPUS codec. Value range is from 1 to 30.</small>
+						</div>
+					</fieldset>
+					<fieldset>
+						<a id="MissionsSettings" name="MissionsSettings"></a>
+						<h2>Missions Settings</h2>
+						<div style="text-align: right">
+							<button type="button" class="btn btn-dark btn-sm" onclick="addNewMission()">Add Mission</button>
+						</div>
+						<div id="missionSettings" style="padding-left: 30px;">
+
+						</div>
+					</fieldset>
+					<fieldset>
+						<a id="DifficultySettings" name="DifficultySettings"></a>
+						<h2>Difficulty Settings</h2>
+						<div class="form-group" style="margin-bottom: 40px;">
+							<label for="forcedDifficulty">Force Difficuty</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="forcedDifficulty" id="forcedDifficulty"> Force Difficulty on missions.
+								</label>
+								<select class="form-control" name="forcedDifficultyValue" id="forcedDifficultyValue" aria-describedby="forcedDifficultyHelp">
+									<option value="Recruit">Recruit</option>
+									<option value="Regular">Regular</option>
+									<option value="Veteran">Veteran</option>
+									<option value="Custom">Custom</option>
+								</select>
+								<small id="forcedDifficultyHelp" class="form-text text-muted">Enforces the selected difficulty on the server. If NOT selected will pick difficulty from each mission settings.</small>
+							</div>
+						</div>
+						<!-- Situational awareness -->
+						<div class="form-group">
+							<label for="reducedDamage">Reduced Damage</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="reducedDamage" id="reducedDamage"> Reduce damage to player.
+								</label>
+								<small id="reducedDamageHelp" class="form-text text-muted">Decreases damage dealt to player and members of his group.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="groupIndicators">Group Indicators</label>
+							<select class="form-control" name="groupIndicators" id="groupIndicators" aria-describedby="groupIndicatorsHelp">
+								<option value="0">Never</option>
+								<option value="1" selected>Limited by Distance</option>
+								<option value="2">Always</option>
+							</select>
+							<small id="groupIndicatorsHelp" class="form-text text-muted">Shows indication icons on units in player's group.</small>
+						</div>
+						<div class="form-group">
+							<label for="friendlyTags">Friendly Tags</label>
+							<select class="form-control" name="friendlyTags" id="friendlyTags" aria-describedby="friendlyTagsHelp">
+								<option value="0">Never</option>
+								<option value="1" selected>Limited by Distance</option>
+								<option value="2">Always</option>
+							</select>
+							<small id="friendlyTagsHelp" class="form-text text-muted">Friendly unit identification. Works only when player aims at a unit.</small>
+						</div>
+						<div class="form-group">
+							<label for="enemyTags">Enemy Tags</label>
+							<select class="form-control" name="enemyTags" id="enemyTags" aria-describedby="enemyTagsHelp">
+								<option value="0">Never</option>
+								<option value="1" selected>Limited by Distance</option>
+								<option value="2">Always</option>
+							</select>
+							<small id="enemyTagsHelp" class="form-text text-muted">Enemy unit identification. Works only when player aims at a unit.</small>
+						</div>
+						<div class="form-group">
+							<label for="detectedMines">Detect Mines</label>
+							<select class="form-control" name="detectedMines" id="detectedMines" aria-describedby="detectedMinesHelp">
+								<option value="0">Never</option>
+								<option value="1" selected>Limited by Distance</option>
+								<option value="2">Always</option>
+							</select>
+							<small id="detectedMinesHelp" class="form-text text-muted">Shows icons indicating exact positions of mines.</small>
+						</div>
+						<div class="form-group">
+							<label for="commands">Commands</label>
+							<select class="form-control" name="commands" id="commands" aria-describedby="commandsHelp">
+								<option value="0">Never</option>
+								<option value="1" selected>Fade out</option>
+								<option value="2">Always</option>
+							</select>
+							<small id="commandsHelp" class="form-text text-muted">Displays commands icons like target markers, get in command and others.</small>
+						</div>
+						<div class="form-group">
+							<label for="waypoints">Waypoints</label>
+							<select class="form-control" name="waypoints" id="waypoints" aria-describedby="waypointsHelp">
+								<option value="0">Never</option>
+								<option value="1" selected>Fade out</option>
+								<option value="2">Always</option>
+							</select>
+							<small id="waypointsHelp" class="form-text text-muted">Manages visibility of waypoint markers.</small>
+						</div>
+						<div class="form-group">
+							<label for="tacticalPing">Tactical Ping</label>
+							<select class="form-control" name="tacticalPing" id="tacticalPing" aria-describedby="tacticalPingHelp">
+								<option value="0">Disabled</option>
+								<option value="1">Enabled</option>
+							</select>
+							<small id="tacticalPingHelp" class="form-text text-muted">Allows to use tacxtical ping for pointing at places within the scene.</small>
+						</div>
+						<!-- Personal awareness -->
+						<div class="form-group">
+							<label for="weaponInfo">Weapon Info</label>
+							<select class="form-control" name="weaponInfo" id="weaponInfo" aria-describedby="weaponInfoHelp">
+								<option value="0">Never</option>
+								<option value="1">Fade out</option>
+								<option value="2" selected>Always</option>
+							</select>
+							<small id="weaponInfoHelp" class="form-text text-muted">Shows weapon info box (contains rouind & magazine count, firing mode, etc.)</small>
+						</div>
+						<div class="form-group">
+							<label for="stanceIndicator">Stance Indicator</label>
+							<select class="form-control" name="stanceIndicator" id="stanceIndicator" aria-describedby="stanceIndicatorHelp">
+								<option value="0">Never</option>
+								<option value="1">Fade out</option>
+								<option value="2" selected>Always</option>
+							</select>
+							<small id="stanceIndicatorHelp" class="form-text text-muted">Displays stance indication (contains actual stance, weapon resting & deployment).</small>
+						</div>
+						<div class="form-group">
+							<label for="staminaBar">Stamina Bar</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="staminaBar" id="staminaBar" checked> Allow to show stamina bar on player's HUD.
+								</label>
+								<small id="staminaBarHelp" class="form-text text-muted">Manages visibility of stamina indicator.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="weaponCrosshair">Weapon Crosshair</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="weaponCrosshair" id="weaponCrosshair"> Allow to show weapon crosshair on player's HUD.
+								</label>
+								<small id="weaponCrosshairHelp" class="form-text text-muted">Shoes weapon crosshair both in 1st and 3rd person view.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="visionAid">Vision Aid</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="visionAid" id="visionAid" checked> Activate Vision Aid.
+								</label>
+								<small id="visionAidHelp" class="form-text text-muted">Helps to detect units in visual range and identify friend from foe.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="thirdPersonView">Third Person View</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="thirdPersonView" id="thirdPersonView" checked> Allow the use of 3rd person view.
+								</label>
+								<small id="thirdPersonViewHelp" class="form-text text-muted">Enables camera switching to 3rd person view.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="cameraShake">Camera Shake</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="cameraShake" id="cameraShake"> Activate Camera Shake.
+								</label>
+								<small id="cameraShakeHelp" class="form-text text-muted">Shakes camera if player is near explosion, passing vehicle or if player's vehicle is under G-load.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="scoreTable">Score Table</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="scoreTable" id="scoreTable" checked> Allow to open the scoreboard table in-game.
+								</label>
+								<small id="scoreTableHelp" class="form-text text-muted">Displays table with kills, deaths and overall score in multiplayer.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="deathMessages">Death Messages</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="deathMessages" id="deathMessages" checked> Allow reports of death messagues.
+								</label>
+								<small id="deathMessagesHelp" class="form-text text-muted">Shows in chat window who killed the player.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="vonID">VoN ID</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="vonID" id="vonID" checked> Allow to see how is speking in VoN.
+								</label>
+								<small id="vonIDHelp" class="form-text text-muted">Indicates who is spaking through VON communication.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mapContent">Map Content</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="mapContent" id="mapContent"> Allow to see the map content.
+								</label>
+								<small id="mapContentHelp" class="form-text text-muted">Enables/Disables the option of showing units and mines on the map</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="autoReport">Auto Report</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="autoReport" id="autoReport" checked> Allow to see the map content.
+								</label>
+								<small id="autoReportHelp" class="form-text text-muted">Enables automatic reporting of various situations by the player.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="multipleSaves">Multiple Saves</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="multipleSaves" id="multipleSaves" checked> Allow to see the map content.
+								</label>
+								<small id="multipleSavesHelp" class="form-text text-muted">Allows player to create multiple saves in a mission.</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="skillAI">AI Skill</label>
+							<input type="number" class="form-control" name="skillAI" id="skillAI" aria-describedby="skillAIHelp" min="0" max="1" step="0.01" value="0.5" placeholder='0.5'>
+							<small id="skillAIHelp" class="form-text text-muted">Set of abilities determinig the combat performance of AI controlled units. Value between 0-1.</small>
+						</div>
+						<div class="form-group">
+							<label for="precisionAI">AI Precision</label>
+							<input type="number" class="form-control" name="precisionAI" id="precisionAI" aria-describedby="precisionAIHelp" step="0.01" min="0" max="1" value="0.5" placeholder='0.5'>
+							<small id="precisionAIHelp" class="form-text text-muted">Weapon handling skill and aiming precision of AI controlled units. Value between 0-1.</small>
+						</div>
+					</fieldset>
+					<fieldset class="advanced">
+						<a id="LogSettings" name="LogSettings"></a>
+						<h2>Log Settings</h2>
+						<div class="form-group advanced">
+							<label for="logFile">Log File</label>
+							<input type="text" class="form-control" name="logFile" id="logFile" aria-describedby="logFileHelp" value="server_console.log" placeholder='"server_console.log"'>
+							<small id="logFileHelp" class="form-text text-muted">Enables output of dedicated server console into textfile. Default location of log is same as crash dumps and other logs.</small>
+						</div>
+						<div class="form-group advanced">
+							<label for="timeStampFormat">Time Stamps Format</label>
+							<select class="form-control" name="timeStampFormat" id="timeStampFormat" aria-describedby="timeStampFormatHelp">
+								<option value="none">None</option>
+								<option value="short">Short</option>
+								<option value="full">Full</option>
+							</select>
+							<small id="timeStampFormatHelp" class="form-text text-muted">Set the timestamp format used on each report line in server-side RPT file.</small>
+						</div>
+					</fieldset>
+					<button type="submit" class="btn btn-primary" onclick="">Generate</button>
+					<div class="lateralNav">
+						<nav id="navbar-example3" class="navbar navbar-light bg-light">
+							<a class="navbar-brand" href="#">Navigation</a>
+							<nav class="nav nav-pills flex-column">
+								<a class="nav-link" href="#GlobalSettings">Global Settings</a>
+								<a class="nav-link" href="#ConnectionSettings">Connection Settings</a>
+								<a class="nav-link" href="#In-GameSettings">In-Game Settings</a>
+								<a class="nav-link" href="#MissionsSettings">Missions Settings</a>
+								<a class="nav-link" href="#DifficultySettings">Difficulty Settings</a>
+								<a class="nav-link advanced" href="#LogSettings">Log Settings</a>
+								<button type="submit" class="btn btn-success" onclick="" style="margin-top:10px;">Generate</button>
+							</nav>
+
+						</nav>
+					</div>
+				</form>
+			</div>
+		</div>
+		<hr>
+		<!--<div class="row">-->
+		<footer class="row" style="display: flex;flex-wrap: nowrap;justify-content:space-between;margin-bottom: 20px;padding-left: 15px;padding-right: 15px;">
+			<span>© By-Jokese 2017</span>
+			<span>
+				<small>
+					<a href="disclaimer.html" class="disclaimer">Read our Disclaimer
+						<a/>
+				</small>
+			</span>
+			<a href='https://ko-fi.com/byjokese' target='_blank'>
+				<img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+			</a>
+		</footer>
+	</div>
+	<!--</div>-->
+	<!-- /container -->
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	    crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+	    crossorigin="anonymous"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="https://cdn.rawgit.com/janl/mustache.js/master/mustache.min.js"></script>
+	<script src="js/generateConfigFile.js"></script>
+
+	<script>
+		var lastMissionID = 1;
+		$(document).ready(function () {
+			$(".advanced").hide();
+			var form = document.getElementById("serverConfigForm");
+			form.reset();
+		});
+
+		$('.modeSelector').change(function (e) {
+			$(".advanced").toggle();
+		});
+
+		var lastMissionID = 1;
+
+		function addNewMission() {
+			var baseClassName = "MissionRotation";
+			var baseMissionName = "MissionFileName";
+			var baseMissionDifficulty = "MissionDifficulty";
+			$.get('templates/mission.html', function (template) {
+				var rendered = Mustache.render(template, {
+					missionID: lastMissionID,
+					missionClassName: baseClassName + lastMissionID,
+					missionName: baseMissionName + lastMissionID,
+					missionDifficulty: baseMissionDifficulty + lastMissionID
+				});
+				$('#missionSettings').append(rendered);
+				lastMissionID++;
+			});
+		}
+
+		function deletechild(child) {
+			$("#" + child).remove();
+		}
+
+		$('#motd').keyup(validateTextarea);
+		$('#admins').keyup(validateTextarea);
+		$('#headlessClients').keyup(validateTextarea);
+		$('#localClient').keyup(validateTextarea);
+
+		function validateTextarea() {
+			var errorMsg = "Please match the format requested (With no ending comma).";
+			var textarea = this;
+			var pattern = new RegExp('^' + $(textarea).attr('pattern') + '$');
+			// check each line of text
+			$.each($(this).val().split("\n"), function () {
+				// check if the line matches the pattern
+				var hasError = !this.match(pattern);
+				if (typeof textarea.setCustomValidity === 'function') {
+					textarea.setCustomValidity(hasError ? errorMsg : '');
+				} else {
+					// Not supported by the browser, fallback to manual error display...
+					$(textarea).toggleClass('error', !!hasError);
+					$(textarea).toggleClass('ok', !hasError);
+					if (hasError) {
+						$(textarea).attr('title', errorMsg);
+					} else {
+						$(textarea).removeAttr('title');
+					}
+				}
+				return !hasError;
+			});
+		}
+	</script>
+</body>
+
+</html>
