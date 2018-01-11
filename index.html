@@ -73,7 +73,7 @@
 			</h2>
 			<p>Générez vos propres configs de serveur facilement.</p>
 			<p>
-				<a class="btn btn-primary btn-lg" href="https://github.com/KazeroG/Arma-3/tree/Config-Generator" role="button">Learn more »</a>
+				<a class="btn btn-primary btn-lg" href="https://github.com/KazeroG/Arma-3/tree/Config-Generator" role="button">En apprendre plus »</a>
 			</p>
 		</div>
 	</div>
@@ -85,88 +85,88 @@
 				<div style="text-align: center;">
 					<div class="btn-group" data-toggle="buttons">
 						<label class="btn btn-secondary active">
-							<input type="radio" class="modeSelector" name="options" id="basicMode" autocomplete="off" checked> Basic
+							<input type="radio" class="modeSelector" name="options" id="basicMode" autocomplete="off" checked> Basique
 						</label>
 						<label class="btn btn-secondary">
-							<input type="radio" class="modeSelector" name="options" id="advancedMode" autocomplete="off"> Advanced
+							<input type="radio" class="modeSelector" name="options" id="advancedMode" autocomplete="off"> Avancée
 						</label>
 					</div>
 				</div>
 				<form id="serverConfigForm" action="javascript:generateConfigFile();">
 					<fieldset>
 						<a id="GlobalSettings" name="GlobalSettings"></a>
-						<h2>Global Settings</h2>
+						<h2>Paramètres globaux</h2>
 						<div class="form-group">
-							<label for="hostname">Host Name</label>
+							<label for="hostname">Nom d'hôte</label>
 							<input type="text" class="form-control" name="hostname" id="hostname" aria-describedby="hostnameHelp" placeholder="Server public Name" required>
-							<small id="hostnameHelp" class="form-text text-muted">The name of the server that shall be displayed in the public server list</small>
+							<small id="hostnameHelp" class="form-text text-muted">Le nom du serveur qui doit être affiché dans la liste des serveurs publics</small>
 						</div>
 						<div class="form-group">
-							<label for="password">Server Password</label>
+							<label for="password">Mot de passe du serveur</label>
 							<input type="password" class="form-control" name="password" id="password" aria-describedby="passwordHelp" placeholder="Password" required>
-							<small id="passwordHelp" class="form-text text-muted">Password for joining, eg connecting to the server</small>
+							<small id="passwordHelp" class="form-text text-muted">Mot de passe pour joindre, par exemple se connecter au serveur</small>
 						</div>
 						<div class="form-group">
-							<label for="passwordAdmin">Admin Password</label>
+							<label for="passwordAdmin">Mot de passe administrateur</label>
 							<input type="password" class="form-control" name="passwordAdmin" id="passwordAdmin" aria-describedby="passwordAdminHelp" placeholder="Admin Password" required>
-							<small id="passwordAdminHelp" class="form-text text-muted">Password to become server admin. When you're in Arma MP and connected to the server, type '#login mypassword'</small>
+							<small id="passwordAdminHelp" class="form-text text-muted">Mot de passe pour devenir administrateur du serveur. Lorsque vous êtes dans Arma MP et connecté au serveur, tapez '#login mypassword'</small>
 						</div>
 						<div class="form-group advanced">
-							<label for="serverCommandPassword">Command Password</label>
+							<label for="serverCommandPassword">Mot de passe</label>
 							<input type="password" class="form-control" name="serverCommandPassword" id="serverCommandPassword" aria-describedby="serverCommandPasswordHelp" placeholder="Password">
-							<small id="serverCommandPasswordHelp" class="form-text text-muted">Password required by alternate syntax of serverCommand on server-side scripting. If blank will be the same as the Admin Password.</small>
+							<small id="serverCommandPasswordHelp" class="form-text text-muted">Mot de passe requis par la syntaxe alternative de serverCommand sur les scripts côté serveur. Si vide sera le même que le mot de passe administrateur.</small>
 						</div>
 						<div class="form-group">
-							<label for="motd">Messague of the Day (Motd)</label>
+							<label for="motd">Message du jour (Motd)</label>
 							<textarea class="form-control" rows="2" name="motd" id="motd" aria-describedby="motdHelp" placeholder='Messague 1,Messague 2,Messague 3' pattern="([^,]+,)*[^,]+"></textarea>
-							<small id="motdHelp" class="form-text text-muted">Welcome messagues separated by commas.</small>
+							<small id="motdHelp" class="form-text text-muted">Messages d'accueil séparés par des virgules.</small>
 						</div>
 						<div class="form-group">
-							<label for="motdInterval">Motd Interval</label>
+							<label for="motdInterval">Motd Intervalle</label>
 							<input type="number" class="form-control" name="motdInterval" id="motdInterval" aria-describedby="motdIntervalHelp" value="5" min="0" placeholder='5'>
-							<small id="motdIntervalHelp" class="form-text text-muted">Time interval (in seconds) between each message.</small>
+							<small id="motdIntervalHelp" class="form-text text-muted">Intervalle de temps (en secondes) entre chaque message.</small>
 						</div>
 						<div class="form-group advanced">
-							<label for="admins">Admin Whitelist</label>
+							<label for="admins">Whitelist/Liste blanche d'administration</label>
 							<input type="text" class="form-control" name="admins" id="admins" aria-describedby="adminsHelp" placeholder='UID1,UID2' pattern="([^,]+,)*[^,]+">
-							<small id="adminsHelp" class="form-text text-muted">List of admin Steam UIDs that are whitelisted. Those can use #login w/o password.</small>
+							<small id="adminsHelp" class="form-text text-muted">Liste des administrateurs UID Steam qui sont ajoutés à la liste blanche. Ceux-ci peuvent utiliser #login sans mot de passe.</small>
 						</div>
 						<div class="form-group advanced">
-							<label for="headlessClients">Headless Client Whitelist</label>
+							<label for="headlessClients">Whitelist/Liste blanche des clients sans tête/Headless Client</label>
 							<input type="text" class="form-control" name="headlessClients" id="headlessClients" aria-describedby="headlessClientsHelp" placeholder='127.0.0.1, 8.8.8.8' pattern="([^,]+,)*[^,]+">
-							<small id="headlessClientsHelp" class="form-text text-muted">List of IPs that are whitelisted for joining as HeadlessClient.</small>
+							<small id="headlessClientsHelp" class="form-text text-muted">Liste des adresses IP qui sont ajoutées à la liste blanche pour HeadlessClient.</small>
 						</div>
 						<div class="form-group advanced">
-							<label for="localClient">Local Client Whitelist (low latency)</label>
+							<label for="localClient">Liste blanche des clients locaux (faible latence)</label>
 							<input type="text" class="form-control" name="localClient" id="localClient" aria-describedby="localClientHelp" placeholder='127.0.0.1, 8.8.8.8' pattern="([^,]+,)*[^,]+">
-							<small id="localClientHelp" class="form-text text-muted">Same as Headless Client Whitelist, but to indicate clients with unlimited bandwidth and nearly no latency.</small>
+							<small id="localClientHelp" class="form-text text-muted">Identique à Whitelist Headless Client, mais pour indiquer aux clients une bande passante illimitée et quasiment aucune latence.</small>
 						</div>
 					</fieldset>
 					<fieldset>
 						<a id="ConnectionSettings" name="ConnectionSettings"></a>
-						<h2>Connection Settings</h2>
+						<h2>Paramètres de connexion</h2>
 						<div class="form-group">
-							<label for="maxPlayers">Max Players</label>
+							<label for="maxPlayers">Le maximum de joueurs</label>
 							<input type="number" class="form-control" name="maxPlayers" id="maxPlayers" aria-describedby="maxPlayersHelp" value="8" min="0" placeholder="8">
-							<small id="maxPlayersHelp" class="form-text text-muted">The name of the server that shall be displayed in the public server list</small>
+							<small id="maxPlayersHelp" class="form-text text-muted">Le nom du serveur qui doit être affiché dans la liste des serveurs publics</small>
 						</div>
 						<div class="form-group advanced">
 							<label for="kickDuplicate">Kick Duplicates</label>
 							<div class="form-check">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="kickDuplicate" id="kickDuplicate" checked> Do not allow duplicate game IDs.
+									<input class="form-check-input" type="checkbox" name="kickDuplicate" id="kickDuplicate" checked> Ne pas autoriser les ID de jeu en double.
 								</label>
-								<small id="kickduplicateHelp" class="form-text text-muted">Second player with an existing ID will be kicked automatically. 1 means active, 0 disabled.</small>
+								<small id="kickduplicateHelp" class="form-text text-muted">Le deuxième joueur avec un identifiant existant sera automatiquement kické. 1 signifie actif, 0 désactivé.</small>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="verifySignatures">Verify Signatures</label>
+							<label for="verifySignatures">Vérifier les signatures</label>
 							<select class="form-control" name="verifySignatures" id="verifySignatures" aria-describedby="verifySignaturesHelp">
-								<option value="0">No Protection</option>
-								<option value="1">Weak protection</option>
-								<option value="2">Full protection</option>
+								<option value ="0"> Pas de protection </option>
+								<option value ="1"> Protection faible </option>
+								<option value ="2"> Protection complète </option>
 							</select>
-							<small id="verifySignaturesHelp" class="form-text text-muted">Enables or disables the signature verification for addons.</small>
+							<small id="verifySignaturesHelp" class="form-text text-muted">Active ou désactive la vérification de signature pour les add-ons.</small>
 						</div>
 						<div class="form-group advanced">
 							<label for="disconnectTimeout">Disconnect Timeout</label>
@@ -559,6 +559,12 @@
 					</div>
 				</form>
 			</div>
+			<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, multilanguagePage: true}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
 		</div>
 		<hr>
 		<!--<div class="row">-->
