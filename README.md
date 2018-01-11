@@ -2,8 +2,6 @@
 
 Arma Server Config Generator est un projet Open-Source sous licence GPLv3 permettant de créer des fichiers de configuration Arma 3 Server, connus sous le nom de fichiers "server.cfg".
 
-Je m'ennuyais d'avoir à chercher sur le wiki pour trouver un modèle pour ma configuration de serveur, et ensuite devoir chercher ce que tous les paramètres signifiaient. Ce projet est une solution avec laquelle je suis venu configurer des serveurs arma 3 plus rapidement et plus facilement pour n'importe quel type d'utilisateur. J'espère que ce sera aussi utile que cela pour moi.
-
 Cet outil a à la fois, un mode de base pour créer rapidement une config, ou une version avancée avec un contrôle total sur les derniers paramètres qu'offre Arma 3.
 
 ## Usage
