@@ -1,38 +1,22 @@
-<p align="center">
-    <a href="https://github.com/byjokese/Arma-Server-Config-Generator/releases/latest">
-        <img src="https://img.shields.io/badge/Version-0.9b-blue.svg?style=flat-square" alt="ACG Version">
-    </a>
-    <a href="https://github.com/byjokese/Arma-Server-Config-Generator/issues">
-        <img src="https://img.shields.io/github/issues-raw/byjokese/Arma-Server-Config-Generator.svg?style=flat-square&label=Issues" alt="ACG3 Issues">
-    </a>
-    <a href="https://github.com/byjokese/Arma-Server-Config-Generator/blob/master/LICENCE">
-        <img src="https://img.shields.io/badge/License-GPLv3-red.svg?style=flat-square" alt="ACG License">
-    </a>
-</p>
-
 # Arma-Server-Config-Generator
 
-Arma Server Config Generator is an Open-Source project under GPLv3 Licence for creating Arma 3 Server config files, known as ´server.cfg´ files.
+Arma Server Config Generator est un projet Open-Source sous licence GPLv3 permettant de créer des fichiers de configuration Arma 3 Server, connus sous le nom de fichiers "server.cfg".
 
-I was bored of having to search the wiki to find a template for my server config, and then having to look for what all the parameters meant. This project is a solution I came with to configure arma 3 servers quicker and easier for any type of user. Hopefully it will be as useful as it is for me.
+Je m'ennuyais d'avoir à chercher sur le wiki pour trouver un modèle pour ma configuration de serveur, et ensuite devoir chercher ce que tous les paramètres signifiaient. Ce projet est une solution avec laquelle je suis venu configurer des serveurs arma 3 plus rapidement et plus facilement pour n'importe quel type d'utilisateur. J'espère que ce sera aussi utile que cela pour moi.
 
-This Tool has both, a basic mode for quick creating a config, or an advanced version with full control over the lastest parameters Arma 3 is offering.
+Cet outil a à la fois, un mode de base pour créer rapidement une config, ou une version avancée avec un contrôle total sur les derniers paramètres qu'offre Arma 3.
 
 ## Usage
 
-Head to [a3config.byjokese.com](https://a3config.byjokese.com) and select the mode Basic or Advanced with the button selector.
+Dirigez-vous vers [a3config.byjokese.com] (https://a3config.byjokese.com) et sélectionnez le mode Basic ou Advanced avec le sélecteur de boutons.
 
-<div style="text-align:center;">
-<img src="https://i.imgur.com/pJfh01S.jpg" alt="Mode Selector buttons">
-</div>
+<div style = "text-align: center;">
+<img src = "https://i.imgur.com/pJfh01S.jpg" alt = "Touches de sélection de mode">
+</ div>
 
-Every option has a brief description under the user input describing the paramater usage in Arma 3. Only 3 inputs are requiered the rest of parameters are pre configured with a default value.
+Chaque option a une brève description sous l'entrée de l'utilisateur décrivant l'utilisation du paramètre dans Arma 3. Seules 3 entrées sont requises, le reste des paramètres est pré configuré avec une valeur par défaut.
 
-Once finished creating the config setup, just click one of the two buttons available (one at the right side navigation menu, and the other at the bottom of the page), a messague of download will pop up. Click on save, and you are ready to go!
-
-## Suggestions and Contributions
-
-Feel free to comment any suggestion or bug found in the tool. A full list of features and known errors can be found on the [Issues Section](https://github.com/byjokese/Arma-Server-Config-Generator/issues) of this repository.
+Une fois la configuration de la configuration terminée, il vous suffit de cliquer sur l'un des deux boutons disponibles (l'un dans le menu de navigation de droite et l'autre au bas de la page), une fenêtre de téléchargement s'affichera. Cliquez sur enregistrer, et vous êtes prêt à partir!
 
 
 
