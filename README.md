@@ -6,7 +6,7 @@ Cet outil a à la fois, un mode de base pour créer rapidement une config, ou un
 
 ## Usage
 
-Dirigez-vous vers [a3config.byjokese.com] (https://a3config.byjokese.com) et sélectionnez le mode Basic ou Advanced avec le sélecteur de boutons.
+Dirigez-vous vers [https://github.com/KazeroG/Arma-3/blob/Config-Generator/index.html] (https://htmlpreview.github.io/?https://github.com/KazeroG/Arma-3/blob/Config-Generator/index.html) et sélectionnez le mode Basic ou Advanced avec le sélecteur de boutons.
 
 <div style = "text-align: center;">
 <img src = "https://i.imgur.com/pJfh01S.jpg" alt = "Touches de sélection de mode">
