@@ -16,7 +16,6 @@ Chaque option a une brève description sous l'entrée de l'utilisateur décrivan
 
 Une fois la configuration de la configuration terminée, il vous suffit de cliquer sur l'un des deux boutons disponibles (l'un dans le menu de navigation de droite et l'autre au bas de la page), une fenêtre de téléchargement s'affichera. Cliquez sur enregistrer, et vous êtes prêt à partir!
 
-Credit
+## Credit
 
 Ceci est une traduction du Repo de byjokese (https://github.com/byjokese/Arma-Server-Config-Generator)
-
