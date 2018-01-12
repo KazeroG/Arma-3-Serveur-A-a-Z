@@ -1,0 +1,50 @@
+Wie man den Server installiert
+
+Angenommen: Nitrado
+
+*** WICHTIGER HINWEIS: DAS IST NUR EINE ANLEITUNG, WIE MAN DIE SERVERFILES VON UNS EINSPIELT - DER REST IST WIE BEIM NORMALEN ALTIS LIFE - SIEHE DAZU DAS WIKI: https://wiki.nitrado.net/de/Altis_Life ***
+*** Bitte nicht nur fragen, sondern auch selber nachdenken! Ein guter Altis Life Server ist 'nicht einfach mal so' gemacht ***
+
+1. Datenbanken clearen, falls noch nicht geschehen:
+
+    Alle Tabellen in der Datenbank des Servers löschen (mit PHPMyAdmin oder MySQL Workbench, ...)
+    
+2. SQL-Dateien (./DATABASE/*.sql) einspielen
+
+    1.1 Zuerst den Datenbanknamen in ALLEN Sql-Dateien ÜBERALL abändern:
+    
+	main_altis -> Neuer Datenbankname
+	
+	z.B. main_altis ersetzen durch ni123456_db
+	
+	
+    1.2 SQL-Dateien ausführen
+    
+	Die Dateien können in PHPMyAdmin oder einem anderen Datenbanktool importiert werden.
+	
+	Hinweis: Wenn du eine Datenbank benutzt, in der bereits Altis Life installiert war (haben die Routinen deleteDeadVehicles() und resetLifeVehicles()), dann brauchst du die main_altis_routines.sql-Datei nicht einspielen!
+	
+    1.3 Häuser resetten 
+    
+	SQL-Befehl ausführen:
+    
+	UPDATE homes SET owner=' ', owned='0', inventory='"[]"', inventory_weight='100', trustedpersons='"[]"', ownername=' '
+	
+	
+	Hinweis: Eventuell meckern da ein paar Programme, da die für UPDATE-Aktionen eine ID brauchen. Bitte recherchieren oder von Hand machen :)
+	
+3. PBOs einspielen
+
+    Alles von hier aus wie gehabt:
+    
+    In dem MISSION-Ordner ist Altis_Life.Altis. In mpmissions reinkopieren oder in eine PBO packen (GUIs-Ordner nur für Scripter eventuell wichtig, sonst ignorieren)
+    
+    Im ADDON-Ordner im life_server-Ordner die Init.sqf-Datei anpassen (siehe https://wiki.nitrado.net/de/Altis_Life) und dann in eine PBO packen. Die PBO-Datei kommt in den @life_server/addons Ordner (auch das ist im Wiki beschrieben)
+    
+    
+Keine Garantie für Bugfreiheit!
+Hinweis: Ihr dürft ALLES ändern - genau so wie bei Tonics originalem Altis Life Server - Ihr braucht auch nichts fragen o.Ä.
+
+Hinweis: Die Meldung ">PERMS< Unknown perms found ... looking for DYNPERMS" ist KEIN Fehler, sondern nur ein Hinweis!!!
+	
+	
