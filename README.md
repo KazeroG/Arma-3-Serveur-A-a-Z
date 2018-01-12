@@ -5,8 +5,8 @@ Altis Life, c'est un mode de jeu d'Arma III, un jeu de simulation de guerre plut
 # Wasteland, c'est quoi le principe ?
 
 * 2 équipes : Blufor en bleu et Oppfor en rouge...
-* 1 équipe "neutre" des joueur solitaires qui tirent sur tout le monde...
+1 équipe "neutre" des joueur solitaires qui tirent sur tout le monde...
 
 * Une gestion de la faim et de la soif
 * Des objectifs que les équipes doivent remplir type "Crash d'hélico par ci" - "Cache d'arme par là"
-* Tenir des villes et les fortifier pour empecher les autres équipes d'y entrer et en faire un point de respawn (pas encore implanté à 100%)
+* Tenir des villes et les fortifier pour empecher les autres équipes d'y entrer et en faire un point de respawn
