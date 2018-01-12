@@ -1,13 +1,12 @@
-1. **[Home](https://github.com/KazeroG/Arma-3/wiki)**
+# c'est quoi Altis Life ?
 
-2. **[Requis](https://github.com/KazeroG/Arma-3/wiki/Requis)**
+Altis Life, c'est un mode de jeu d'Arma III, un jeu de simulation de guerre plutôt réaliste, dont le modding est très libre, ce qui en fait un jeu ultra sandbox.Altis Life est un jeu de rôle permettant aux joueurs de créer leurs personnage et de vivre leur vie selon leurs envies et leurs personnalités dans un open world gigantesque.Altis Life regorge de possibilités et la seule chose qui pourrait vous freiner dans cette aventure sera votre imagination.
 
-3. **[Installation/configuration](https://htmlpreview.github.io/?https://github.com/KazeroG/Arma-3/blob/master/installation-et-configuration-dun-serveur-altis-life-de-a-%C3%A0-z.html)**
-* [Paquets pour LGSM](https://github.com/KazeroG/Arma-3/wiki/Installation-des-paquets-pour-LGSM)
-* [Serveur Arma 3](https://github.com/KazeroG/Arma-3/wiki/Installation-du-Serveur-Arma-3)
-* [Base de données](https://github.com/KazeroG/Arma-3/wiki/Installation-et-configuration-de-la-base-de-donn%C3%A9es)
+# Wasteland, c'est quoi le principe ?
 
-4. **[Démarrage du serveur](https://github.com/KazeroG/Arma-3/wiki/D%C3%A9marrage-du-serveur)**
+* 2 équipes : Blufor en bleu et Oppfor en rouge...
+* 1 équipe "neutre" des joueur solitaires qui tirent sur tout le monde...
 
-
-5. **[Erreur/Error](https://github.com/KazeroG/Arma-3/wiki/Erreur---Error)**
+* Une gestion de la faim et de la soif
+* Des objectifs que les équipes doivent remplir type "Crash d'hélico par ci" - "Cache d'arme par là"
+* Tenir des villes et les fortifier pour empecher les autres équipes d'y entrer et en faire un point de respawn (pas encore implanté à 100%)
