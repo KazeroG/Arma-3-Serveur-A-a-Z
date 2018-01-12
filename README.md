@@ -19,3 +19,7 @@ Une fois la configuration de la configuration terminée, il vous suffit de cliqu
 ## Credit
 
 Ceci est une traduction du Repo de byjokese (https://github.com/byjokese/Arma-Server-Config-Generator)
+
+
+
+# En cour de traduction....
