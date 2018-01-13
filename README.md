@@ -22,10 +22,10 @@
 ***
 
 **[Change Log](https://github.com/KazeroG/Arma-3/wiki/Change-Log-Wiki)**
-- [] Ajout Webpanel (en cour d'installation/Config...)
-- [] Ajout fichier serveur pre-config (en cour...)
-- [] Ajout Wiki Webpanel (en cour de redaction...)
-- [] Ajout Wiki Window (en cour de redaction...)
+- [x] Ajout Webpanel (en cour d'installation/Config...)
+- [x] Ajout fichier serveur pre-config (en cour...)
+- [x] Ajout Wiki Webpanel (en cour de redaction...)
+- [x] Ajout Wiki Window (en cour de redaction...)
 - [x] Ajout Wiki Linux (Fini )
 - [x] Ajout Fichier Mission (Fini)
 
