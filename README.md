@@ -20,7 +20,7 @@
 ***
 
 6. **[Erreur/Error](https://github.com/KazeroG/Arma-3/wiki/Erreur---Error)**
-
+***
 
 **[Change Log](https://github.com/KazeroG/Arma-3/wiki/Change-Log-Wiki)**
 - [x] Ajout Wiki Window (en cour de redaction)
@@ -28,6 +28,6 @@
 - [x] Ajout Wiki Webpanel (en cour de redaction)
 - [x] Ajout Fichier Mission (Fini)
 - [x] Ajout Webpanel (en cour d'installation/Config)
-
+***
 
 **Credit:** Ce guide est une copie du guide [Altis-Dev](https://wiki.altisdev.com/books/installation-et-configuration-dun-serveur-altis-life-de-a-%C3%A0-z) sous [licence EUPL 1.2](https://github.com/KazeroG/Arma-3/blob/master/Licence%20EUPL%201.2) avec des modifications  (corrections d'erreurs, mises à jour etc...) car on a remarquer quelques erreur au cour de l'installations ! 
