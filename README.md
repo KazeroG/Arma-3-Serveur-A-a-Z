@@ -16,9 +16,13 @@
 
 4. **[Démarrage du serveur](https://github.com/KazeroG/Arma-3/wiki/D%C3%A9marrage-du-serveur)**
 
+5. **Installation/configuration**
+> Windows
+> Wiki en cour de construction
 
-5. **[Erreur/Error](https://github.com/KazeroG/Arma-3/wiki/Erreur---Error)**
-5. **[Change Log](https://github.com/KazeroG/Arma-3/wiki/Change-Log-Wiki)**
+
+6. **[Erreur/Error](https://github.com/KazeroG/Arma-3/wiki/Erreur---Error)**
+7. **[Change Log](https://github.com/KazeroG/Arma-3/wiki/Change-Log-Wiki)**
 
 
 
