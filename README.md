@@ -4,7 +4,7 @@
 
 1. **[Introduction](https://github.com/KazeroG/Arma-3/wiki)**
 2. **[Requis](https://github.com/KazeroG/Arma-3/wiki/Requis)**
-
+***
 
 3. **Installation/configuration**
 > Linux/Debian/Ubuntu
@@ -12,12 +12,12 @@
 * [Serveur Arma 3](https://github.com/KazeroG/Arma-3/wiki/Installation-du-Serveur-Arma-3)
 * [Base de données](https://github.com/KazeroG/Arma-3/wiki/Installation-et-configuration-de-la-base-de-donn%C3%A9es)
 4. **[Démarrage du serveur](https://github.com/KazeroG/Arma-3/wiki/D%C3%A9marrage-du-serveur)**
-
+***
 
 5. **Installation/configuration**
 > Windows
 > Wiki en cour de construction
-
+***
 
 6. **[Erreur/Error](https://github.com/KazeroG/Arma-3/wiki/Erreur---Error)**
 
