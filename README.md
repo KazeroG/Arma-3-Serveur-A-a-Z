@@ -13,3 +13,5 @@
 
 
 5. **[Erreur/Error](https://github.com/KazeroG/Arma-3/wiki/Erreur---Error)**
+
+<h1 style="font-size: 4.8em">Installation et configuration d'un serveur Altis Life de A à Z</h1>
