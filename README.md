@@ -1,5 +1,8 @@
 **Installation et configuration d'un serveur Altis Life de A à Z**
 
+Ce guide est une copie du guide [Altis-Dev](https://wiki.altisdev.com/books/installation-et-configuration-dun-serveur-altis-life-de-a-%C3%A0-z) avec des modification (correction d'erreurs, mise a jour etc...)
+
+
 1. **[Home](https://github.com/KazeroG/Arma-3/wiki)**
 
 2. **[Requis](https://github.com/KazeroG/Arma-3/wiki/Requis)**
@@ -15,3 +18,5 @@
 5. **[Erreur/Error](https://github.com/KazeroG/Arma-3/wiki/Erreur---Error)**
 
 <h1 style="font-size: 4.8em">Installation et configuration d'un serveur Altis Life de A à Z</h1>
+
+<p>"Comment créer son serveur Altis-Life ?"</p>
