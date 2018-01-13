@@ -1,6 +1,6 @@
 <h1 style="font-size: 4.8em">Installation et configuration d'un serveur Altis Life de A à Z</h1>
 
-Ce guide est une copie du guide [Altis-Dev sous licence EUPL 1.2](https://wiki.altisdev.com/books/installation-et-configuration-dun-serveur-altis-life-de-a-%C3%A0-z) avec des modifications (corrections d'erreurs, mises à jour etc...)
+Ce guide est une copie du guide [Altis-Dev sous](https://wiki.altisdev.com/books/installation-et-configuration-dun-serveur-altis-life-de-a-%C3%A0-z) [licence EUPL 1.2](https://github.com/KazeroG/Arma-3/blob/master/Licence%20EUPL%201.2) avec des modifications  (corrections d'erreurs, mises à jour etc...) car on a remarquer quelques erreur au cour de l'installations !
 
 
 1. **[Home](https://github.com/KazeroG/Arma-3/wiki)**
