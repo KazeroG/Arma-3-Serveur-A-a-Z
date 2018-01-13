@@ -18,7 +18,7 @@
 > Wiki en cour de construction
 
 
-6. **[Erreur/Error](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Erreur---Error)**
+6. **[Erreur/probleme](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Erreur)**
 ***
 
 **[Change Log](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Change-Log-Wiki)**
