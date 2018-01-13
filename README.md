@@ -1,6 +1,8 @@
 <h1 style="font-size: 4.8em">Installation et configuration d'un serveur Altis Life de A à Z</h1>
+<p>"Comment créer son serveur Altis-Life ?"</p>
 
-Ce guide est une copie du guide [Altis-Dev](https://wiki.altisdev.com/books/installation-et-configuration-dun-serveur-altis-life-de-a-%C3%A0-z) sous [licence EUPL 1.2](https://github.com/KazeroG/Arma-3/blob/master/Licence%20EUPL%201.2) avec des modifications  (corrections d'erreurs, mises à jour etc...) car on a remarquer quelques erreur au cour de l'installations !
+
+
 
 
 1. **[Home](https://github.com/KazeroG/Arma-3/wiki)**
@@ -19,4 +21,11 @@ Ce guide est une copie du guide [Altis-Dev](https://wiki.altisdev.com/books/inst
 
 
 
-<p>"Comment créer son serveur Altis-Life ?"</p>
+
+Change Log :
+- [x] Ajout Wiki Window (en cour de redaction)
+- [x] Ajout Wiki Linux (Fini )
+- [x] Ajout Fichier Mission (Fini)
+- [x] Ajout Webpanel (en cour d'installation/Config)
+
+Credit : Ce guide est une copie du guide [Altis-Dev](https://wiki.altisdev.com/books/installation-et-configuration-dun-serveur-altis-life-de-a-%C3%A0-z) sous [licence EUPL 1.2](https://github.com/KazeroG/Arma-3/blob/master/Licence%20EUPL%201.2) avec des modifications  (corrections d'erreurs, mises à jour etc...) car on a remarquer quelques erreur au cour de l'installations ! 
