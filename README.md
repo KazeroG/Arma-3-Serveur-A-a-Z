@@ -25,6 +25,7 @@
 Change Log :
 - [x] Ajout Wiki Window (en cour de redaction)
 - [x] Ajout Wiki Linux (Fini )
+- [x] Ajout Wiki Webpanel (en cour de redaction)
 - [x] Ajout Fichier Mission (Fini)
 - [x] Ajout Webpanel (en cour d'installation/Config)
 
