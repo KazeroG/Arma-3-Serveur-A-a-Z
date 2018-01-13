@@ -1,3 +1,5 @@
+**Installation et configuration d'un serveur Altis Life de A à Z**
+
 1. **[Home](https://github.com/KazeroG/Arma-3/wiki)**
 
 2. **[Requis](https://github.com/KazeroG/Arma-3/wiki/Requis)**
