@@ -29,6 +29,6 @@
 - [x] Ajout Wiki Linux (Fini en cour de correction...)
 - [x] Ajout Config Generateur pour serveur Windows (Fini en cour de traduction...)
 - [x] Ajout Fichier Mission (Fini)
-
+- Yann c'est le plus beau
 
 **Credit:** Ce guide est une copie du guide [Altis-Dev](https://wiki.altisdev.com/books/installation-et-configuration-dun-serveur-altis-life-de-a-%C3%A0-z) sous [licence EUPL 1.2](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/blob/master/LICENSE.md) avec des modifications  (corrections d'erreurs, mises à jour etc...) car on a remarquer quelques erreur au cour de l'installations ! 
