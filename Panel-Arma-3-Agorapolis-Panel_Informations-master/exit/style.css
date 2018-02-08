@@ -1,0 +1,9 @@
+#page-structure {
+  height: 100vh;
+}
+
+.header-text h2, .header-text h1 {
+  font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  font-weight: 900 !important;
+  background: orange;
+}

@@ -1,0 +1,194 @@
+
+.hidden {
+  display: none;
+}
+
+.rotate120 {
+  transform-origin: center top;
+  transform: rotate(120deg);
+}
+
+.rotate-120 {
+  transform-origin: center top;
+  transform: rotate(-120deg);
+}
+
+.dv-loader {
+  margin: 1rem auto;
+  display: block;
+}
+
+*[class*='ring-'] {
+  fill: transparent;
+}
+
+.ring-outer {
+  stroke: rgba(254, 137, 10, 0.2);
+}
+
+.ring-teeth {
+  stroke: rgba(254, 137, 10, 0.2);
+}
+
+.ring-teeth-edge {
+  stroke: rgba(254, 137, 10, 0.5);
+  stroke-width: .5;
+}
+
+.tooth {
+  transform-origin: center bottom;
+  stroke: rgba(254, 137, 10, 0.2);
+  stroke-width: 1.333;
+}
+
+@-moz-document url-prefix() {
+  .tooth {
+    transform-origin: center center;
+  }
+}
+.tooth-ticker {
+  stroke: #fe890a;
+  animation: tick 288s steps(144) infinite;
+}
+
+@keyframes tick {
+  100% {
+    transform: rotate(360deg) translate(0, -88px);
+  }
+}
+.center-origin {
+  transform-origin: center center;
+}
+
+.ring-middle {
+  stroke: rgba(254, 137, 10, 0.1);
+}
+
+.ring-inner {
+  stroke: rgba(254, 137, 10, 0.13);
+}
+
+.ring-inner-animation {
+  stroke: rgba(254, 137, 10, 0.18);
+}
+
+.ring-inner-animation-thin {
+  stroke: rgba(254, 137, 10, 0.25);
+}
+
+.ring-inner-frame {
+  stroke: rgba(254, 137, 10, 0.33);
+}
+
+.ring-inner-part {
+  stroke: rgba(254, 137, 10, 0.42);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.group-innermost-ring {
+  transform-origin: center center;
+  animation: spin 144s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.ring-eye-thin {
+  stroke: rgba(254, 137, 10, 0.2);
+  transform-origin: center center;
+  animation: pulse 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    r: 5;
+    stroke-width: 1;
+  }
+  80% {
+    stroke-width: 3;
+    opacity: 1;
+  }
+  100% {
+    r: 24;
+    stroke-width: 1;
+    opacity: .5;
+  }
+}
+.ring-eye-thick {
+  stroke: rgba(254, 137, 10, 0.05);
+  transform-origin: center center;
+  animation: pulse2 2s cubic-bezier(0.215, 0.61, 0.355, 1.1) infinite;
+}
+
+@keyframes pulse2 {
+  0% {
+    r: 8;
+    stroke-width: 5;
+  }
+  60% {
+    stroke-width: 12;
+    opacity: 1;
+  }
+  90% {
+    r: 20;
+    stroke-width: 5;
+    opacity: .5;
+  }
+  90% {
+    r: 16;
+    stroke-width: 4;
+    opacity: .5;
+  }
+}
+.pixel {
+  stroke: rgba(254, 137, 10, 0.22);
+  stroke-width: 1.5;
+}
+.pixel.active {
+  stroke: #fff;
+}
+
+.groupTravelingLine {
+  transform-origin: center center;
+  animation: spin 4s linear infinite;
+}
+
+.travelingLine {
+  stroke: rgba(254, 137, 10, 0.22);
+  stroke-width: 1;
+  fill: none;
+}
+
+.triangle {
+  fill: #898989;
+  transform-origin: center center;
+  transform: translateY(-107px) scale(0.7);
+}
+.triangle.rotate90 {
+  transform: rotate(90deg) translateY(-107px) scale(0.7);
+}
+.triangle.rotate-90 {
+  transform: rotate(-90deg) translateY(-107px) scale(0.7);
+}
+.triangle.rotate180 {
+  transform: rotate(180deg) translateY(-107px) scale(0.7);
+}
+
+.white-line {
+  transform-origin: center center;
+  stroke: #898989;
+  stroke-width: 1;
+  fill: none;
+  transform: rotate(-7deg) translateY(75px);
+}
+.white-line.alt {
+  transform: scaleX(-1) rotate(-7deg) translateY(75px);
+}
+
+/* .white-lines {
+  transform-origin: center center;
+  transform: rotate(2deg);
+} */
