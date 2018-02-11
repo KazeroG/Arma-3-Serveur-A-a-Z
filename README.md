@@ -18,11 +18,8 @@
 ***
 
 **[Change Log](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Change-Log-Wiki)**
-- [x] Ajout Webpanel (en cour d'installation/Config...)
-- [x] Ajout fichier serveur pre-config (en cour...)
-- [x] Ajout Wiki Webpanel (en cour de redaction...)
-- [x] Ajout Wiki Window (en cour de redaction...)
-- [x] Ajout Wiki Linux (Fini en cour de correction...)
-- [x] Ajout Config Generateur pour serveur Windows (Fini en cour de traduction...)
-- [x] Ajout Fichier Mission (Fini)
+- [x] Finalisation
+- [x] Correction
+- [x] Creation
+
 - Yann c'est le plus beau
