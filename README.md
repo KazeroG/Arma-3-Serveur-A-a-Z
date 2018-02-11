@@ -11,11 +11,11 @@
 * Lancer en tant que root la commande `. menu.sh`
 
 
-
+***
 
 
 6. **[Erreur/probleme](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Erreur)**
-***
+
 
 **[Change Log](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Change-Log-Wiki)**
 - [x] Finalisation
