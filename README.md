@@ -1,21 +1,17 @@
-<h1 style="font-size: 4.8em">Installation et configuration d'un serveur Altis Life de A à Z</h1>
-<p>Comment créer son serveur Altis-Life ?</p>
+<h1 style="font-size: 4.8em">Auto-Installation d'un serveur Altis Life</h1>
+
+# *Si vous etes sur Linux voila un auto installateur qui fait tout pour vous avec quelque outils de plus a installer qui peuvent vous aider a bien travailler sur linux !*
+
+# **Comment utiliser ?**
+
+* Ouvrire Filezilla ou autre 
+* Mettre les fichier Config.cgf et Menu.sh
+* Aller sur putty ou autre
+* Assurer vous que les permission des fichiers est en `777`
+* Lancer en tant que root la commande `. menu.sh`
 
 
-1. **[Introduction](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki)**
-2. **[Requis](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Requis)**
 
-3. **Installation/configuration**
-> Linux/Debian/Ubuntu
-* [Paquets pour LGSM](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Installation-des-paquets-pour-LGSM)
-* [Serveur Arma 3](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Installation-du-Serveur-Arma-3)
-* [Base de données](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Installation-et-configuration-de-la-base-de-donn%C3%A9es)
-4. **[Démarrage du serveur](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/D%C3%A9marrage-du-serveur)**
-
-
-5. **Installation/configuration**
-> Windows
-> Wiki en cour de construction
 
 
 6. **[Erreur/probleme](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Erreur)**
@@ -30,5 +26,3 @@
 - [x] Ajout Config Generateur pour serveur Windows (Fini en cour de traduction...)
 - [x] Ajout Fichier Mission (Fini)
 - Yann c'est le plus beau
-
-**Credit:** Ce guide est une copie du guide [Altis-Dev](https://wiki.altisdev.com/books/installation-et-configuration-dun-serveur-altis-life-de-a-%C3%A0-z) sous [licence EUPL 1.2](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/blob/master/LICENSE.md) avec des modifications  (corrections d'erreurs, mises à jour etc...) car on a remarquer quelques erreur au cour de l'installations ! 
