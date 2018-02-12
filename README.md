@@ -1,13 +1,16 @@
 <h1 style="font-size: 4.8em">Installation et configuration d'un serveur Altis Life de A à Z</h1>
 
-# Fichiers
+## Fichiers
 
-# Tutoriels
+## Tutoriels
 **[Arma 3 wiki](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki)**
+>Arma 3 wiki Complet comment creer, installer et configurer un serveur arma 3 (Altislife)
 **[Erreur/probleme](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Erreur)**
+>Erreur courante pouvant arriver en cours d'installation, de configuration ou autres
 
-# Outils
+## Outils
 **[Auto-Installation d'un serveur Altis Life](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Auto-Install)**
+
 **[Arma Server Config Generator](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Config-Generator)**
 
 ***
