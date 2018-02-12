@@ -2,7 +2,7 @@
 
 ># *En cour de Correction*
 
-## *Si vous etes sur Linux*
+### *Si vous etes sur Linux*
 
 ### *voila un auto installateur qui fait tout pour vous avec quelque outils de plus a installer qui peuvent vous aider a bien travailler sur linux !*
 
