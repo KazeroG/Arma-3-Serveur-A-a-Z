@@ -1,19 +1,18 @@
 # Installation et configuration d'un serveur Altis Life de A à Z
 
 ## Fichiers
-- [x] [Map](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Map)** >idée de map arma3 a creer
-- [x] [Map](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Map)**
+- [x] [Map](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Map) >idée de map arma3 a creer...
 
 ## Tutoriels
-**[Arma 3 wiki](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki)**>Arma 3 wiki Complet comment creer, installer et configurer un serveur arma 3 (Altislife)
-**[Erreur/probleme](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Erreur)**>Erreur courante pouvant arriver en cours d'installation, de configuration ou autres
+- [x] [Arma 3 wiki](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki) >Arma 3 wiki Complet comment creer, installer et configurer un serveur arma 3 (Altislife)
+- [x] [Erreur/probleme](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Erreur) >Erreur courante pouvant arriver en cours d'installation, de configuration ou autres...
 
 ## Outils
-**[Auto-Installation d'un serveur Altis Life](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Auto-Install)**>installateur qui fait tout pour vous ...
-**[Arma Server Config Generator](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Config-Generator)**>créer des fichiers de configuration Arma 3 Server...
+- [x] [Auto-Installation d'un serveur Altis Life](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Auto-Install) >installateur qui fait tout pour vous ...
+- [x] [Arma Server Config Generator](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Config-Generator) >créer des fichiers de configuration Arma 3 Server...
 
 
-**[Change Log](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Change-Log-Wiki)**
+## [Change Log](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Change-Log-Wiki)**
 - [x] Ajout Webpanel (en cour d'installation/Config...)
 - [x] Ajout fichier serveur pre-config (en cour...)
 - [x] Ajout Wiki Webpanel (en cour de redaction...)
