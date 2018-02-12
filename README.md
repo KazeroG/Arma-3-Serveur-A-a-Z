@@ -1,4 +1,5 @@
 <h1 style="font-size: 4.8em">Auto-Installation d'un serveur Altis Life </h1>
+
 # *En cour de Correction*
 
 ## *Si vous etes sur Linux*
