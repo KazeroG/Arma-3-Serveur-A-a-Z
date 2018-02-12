@@ -27,7 +27,8 @@ steampass='Password'
 **[Change Log](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Change-Log-Wiki)**
 - [x] Realease V0.1
 - [x] Correction issue Permission denied ! #10
-- [x] Recorrection En cour
+- [x] issue #10 : Permission denied ! 
+- [x] Recorrection
 - [x] Finalisation
 - [x] Correction
 - [x] Creation
