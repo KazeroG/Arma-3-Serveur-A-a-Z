@@ -1,6 +1,6 @@
 # *Auto-Installation d'un serveur Altis Life*
 
-# >*En cour de Correction*
+># En cour de Correction
 
 ## *Si vous etes sur Linux*
 
