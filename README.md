@@ -1,7 +1,5 @@
 # *Auto-Installation d'un serveur Altis Life*
 
-># *En cour de Correction*
-
 ### *Si vous etes sur Linux*
 
 ### *voila un auto installateur qui fait tout pour vous avec quelque outils de plus a installer qui peuvent vous aider a bien travailler sur linux !*
@@ -23,7 +21,9 @@
 
 
 **[Change Log](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Change-Log-Wiki)**
-- [ ] Recorrection En cour
+- [x] Realease V0.1
+- [x] Correction issue Permission denied ! #10
+- [x] Recorrection En cour
 - [x] Finalisation
 - [x] Correction
 - [x] Creation
