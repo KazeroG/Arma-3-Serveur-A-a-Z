@@ -1,4 +1,4 @@
-<h1 style="font-size: 4.8em">Auto-Installation d'un serveur Altis Life </h1>
+# *Auto-Installation d'un serveur Altis Life*
 
 # *En cour de Correction*
 
