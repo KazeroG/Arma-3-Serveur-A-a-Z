@@ -2,9 +2,12 @@
 
 ## Fichiers
 - [x] [Map](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Map) >idée de map arma3 a creer...
+- [x] [Mission](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Mission) >quelque fichier de mission creer par les communauté...
+- [x] [Web panel](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Web-Panel) >Web panel pour bien gerer sont serveur !
+- [x] [Web site](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Web-site) >Site web pour bien presenter sont serveur !
 
 ## Tutoriels
-- [x] [Arma 3 wiki](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki) >Arma 3 wiki Complet comment creer, installer et configurer un serveur arma 3 (Altislife)
+- [x] [Arma 3 wiki](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki) >wiki Complet comment creer, installer et configurer un serveur arma 3 (Altislife)
 - [x] [Erreur/probleme](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Erreur) >Erreur courante pouvant arriver en cours d'installation, de configuration ou autres...
 
 ## Outils
