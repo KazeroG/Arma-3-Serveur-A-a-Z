@@ -9,9 +9,9 @@ while true; do
 
           1- Installation Packages
           2- Update
-          3- Installation Arma (A corriger)
+          3- Installation Arma
           4- Installation Composer
-          5- Installation Flarum
+          5- Installation Flarum (A revoir)
           6- Installation Ajenti
           0- Quitter
 _EOF_
@@ -24,7 +24,7 @@ _EOF_
         apt-get update
         apt-get upgrade
         apt-get dist-upgrade
-        dpkg --add-architecture i386;
+        dpkg --add-architecture i386
         apt-get update
         apt-get upgrade
         apt-get dist-upgrade
@@ -60,15 +60,15 @@ _EOF_
         continue
         ;;
       3)
-        adduser arma3
-        cp /root/config.cfg /home/arma3/arma3server.cfg
-        cd /home/arma3/ | wget -N --no-check-certificate https://gameservermanagers.com/dl/linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh arma3server
-        chown -R arma3 /home/arma3
-        runuser -l arma3 -c './arma3server ai'
-        chown -R arma3 /home/arma3
-        cp /home/arma3/arma3server.cfg /home/arma3/lgsm/config-lgsm/arma3server/arma3server.cfg
-        chown -R arma3 /home/arma3
-        runuser -l arma3 -c './arma3server ai'
+        runuser -l root -c "adduser arma3"
+        runuser -l root -c "cp /root/config.cfg /home/arma3/arma3server.cfg"
+        runuser -l arma3 -c "cd /home/arma3/ | wget -N --no-check-certificate https://gameservermanagers.com/dl/linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh arma3server"
+        runuser -l root -c "chown -R arma3 /home/arma3"
+        runuser -l arma3 -c "./arma3server ai"
+        runuser -l root -c "chown -R arma3 /home/arma3"
+        runuser -l root -c "cp /home/arma3/arma3server.cfg /home/arma3/lgsm/config-lgsm/arma3server/arma3server.cfg"
+        runuser -l root -c "chown -R arma3 /home/arma3"
+        runuser -l arma3 -c "./arma3server ai"
         sleep $DELAY
         continue
         ;;
@@ -81,8 +81,9 @@ _EOF_
       5)
         cd /var/www/html
         mkdir forum
-        cd forum
+        cd /var/www/html/forum
         composer create-project flarum/flarum . --stability=beta
+        composer update
         chmod -R 777 /var/www/html/forum
         sleep $DELAY
         continue
