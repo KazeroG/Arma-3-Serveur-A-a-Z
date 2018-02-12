@@ -1,7 +1,7 @@
 <h1 style="font-size: 4.8em">Auto-Installation d'un serveur Altis Life </h1>
-# _*En cour de Correction*_
+# *En cour de Correction*
 
-## _*Si vous etes sur Linux*_
+## *Si vous etes sur Linux*
 
 ### *voila un auto installateur qui fait tout pour vous avec quelque outils de plus a installer qui peuvent vous aider a bien travailler sur linux !*
 
