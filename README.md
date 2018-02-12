@@ -1,24 +1,15 @@
 <h1 style="font-size: 4.8em">Installation et configuration d'un serveur Altis Life de A à Z</h1>
-<p>Comment créer son serveur Altis-Life ?</p>
 
+# Fichiers
 
-1. **[Introduction](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki)**
-2. **[Requis](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Requis)**
+# Tutoriels
+**[Arma 3 wiki](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki)**
+**[Erreur/probleme](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Erreur)**
 
-3. **Installation/configuration**
-> Linux/Debian/Ubuntu
-* [Paquets pour LGSM](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Installation-des-paquets-pour-LGSM)
-* [Serveur Arma 3](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Installation-du-Serveur-Arma-3)
-* [Base de données](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Installation-et-configuration-de-la-base-de-donn%C3%A9es)
-4. **[Démarrage du serveur](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/D%C3%A9marrage-du-serveur)**
+# Outils
+**[Auto-Installation d'un serveur Altis Life](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Auto-Install)**
+**[Arma Server Config Generator](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Config-Generator)**
 
-
-5. **Installation/configuration**
-> Windows
-> Wiki en cour de construction
-
-
-6. **[Erreur/probleme](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Erreur)**
 ***
 
 **[Change Log](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki/Change-Log-Wiki)**
