@@ -1,8 +1,8 @@
 # Installation et configuration d'un serveur Altis Life de A à Z
 
 ## Fichiers
-**[Map](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Map)**>idée de map arma3 a creer
-**[Map](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Map)**>idée de map arma3 a creer
+- [x] [Map](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Map)** >idée de map arma3 a creer
+- [x] [Map](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/tree/Map)**
 
 ## Tutoriels
 **[Arma 3 wiki](https://github.com/KazeroG/Arma-3-Serveur-A-a-Z/wiki)**>Arma 3 wiki Complet comment creer, installer et configurer un serveur arma 3 (Altislife)
