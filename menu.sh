@@ -21,15 +21,12 @@ _EOF_
   if [[ $REPLY =~ ^[0-6]$ ]]; then
     case $REPLY in
       1)
-        apt-get update
-        apt-get upgrade
-        apt-get dist-upgrade
         dpkg --add-architecture i386
         apt-get update
         apt-get upgrade
         apt-get dist-upgrade
-        apt-get install  sudo binutils postfix curl wget file bzip2 gzip unzip bsdmainutils python util-linux ca-certificates tmux lib32gcc1 libstdc++6 libstdc++6:i386
-        apt-get install  software-properties-common
+        apt-get install sudo binutils postfix curl wget file bzip2 gzip unzip bsdmainutils python util-linux ca-certificates tmux lib32gcc1 libstdc++6 libstdc++6:i386
+        apt-get install software-properties-common
         apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
         add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.igh.cnrs.fr/pub/mariadb/repo/10.1/debian jessie main'
         apt-get update
@@ -39,8 +36,11 @@ _EOF_
         apt-get install apt-transport-https lsb-release ca-certificates
         wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
         echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
+        sudo apt-get install python-software-properties software-properties-common
+        sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+        sudo apt-get update
+        sudo apt-get install php7.0 php7.0-fpm php7.0-mysql -y
         apt-get install apache2
-        apt-get install --no-install-recommends php7.1 libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json php7.1-gd php7.1-mcrypt php7.1-msgpack php7.1-memcached php7.1-intl php7.1-sqlite3 php7.1-gmp php7.1-geoip php7.1-mbstring php7.1-redis php7.1-xml php7.1-zip
         apt-get install phpmyadmin
         apt-get install libtbb2:i386
         apt-get install lib32z1-dev
@@ -48,6 +48,7 @@ _EOF_
         apt-get upgrade
         apt-get dist-upgrade
         apt-get autoremove
+        sudo apt-get --purge autoremove -y
         sleep $DELAY
         continue
         ;;
@@ -75,6 +76,7 @@ _EOF_
       4)
         curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
         mv /usr/local/bin/composer.phar /usr/local/bin/composer
+        composer update
         sleep $DELAY
         continue
         ;;
