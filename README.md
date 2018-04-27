@@ -6,9 +6,9 @@ Cette map et idée est etes libre et vous pouvez vous en inspirer !
 
 # Todo
 
-[x]. Trouver une idée de map
-[x]. Photographier
-[ ]. Créer
-[ ]. Publier
+- [x] Trouver une idée de map
+- [x] Photographier
+- [] Créer
+- [] Publier
 
 ![Image](src)
