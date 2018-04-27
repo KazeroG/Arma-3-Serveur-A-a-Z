@@ -8,7 +8,7 @@ Cette map et idée est etes libre et vous pouvez vous en inspirer !
 
 - [x] Trouver une idée de map
 - [x] Photographier
-- [] Créer
-- [] Publier
+- [ ] Créer
+- [ ] Publier
 
 ![Image](src)
